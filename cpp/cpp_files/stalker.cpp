@@ -22,15 +22,15 @@ const char *logo =
 "   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━\n";
 
 const char *helpfile =
-"Stalker searches multiple online databases to return information on\n"
-"a given target. There are two options for running Stalker. The first\n"
-"is fast mode. This mode is selected by passing \'-f\' to the Stalker\n"
-"program. This will cause Stalker to search only the top 5 databases on file\n"
-"The other mode is all mode. This option causes Stalker to search\n"
-"every database it has on file and can be achieved by passing \'-a\' to the\n"
-"Stalker program. This process could cause your browser to\n"
-"run slowly or even crash. You have been warned. :)\n"
-"\n\n"
+// "Stalker searches multiple online databases to return information on\n"
+// "a given target. There are two options for running Stalker. The first\n"
+// "is fast mode. This mode is selected by passing \'-f\' to the Stalker\n"
+// "program. This will cause Stalker to search only the top 5 databases on file\n"
+// "The other mode is all mode. This option causes Stalker to search\n"
+// "every database it has on file and can be achieved by passing \'-a\' to the\n"
+// "Stalker program. This process could cause your browser to\n"
+// "run slowly or even crash. You have been warned. :)\n"
+// "\n\n"
 "USAGE:\n"
 "$ ./stalker -h/--help"
 "$ ./stalker -f          <-- Run Stalker In Fast Mode\n"
@@ -188,12 +188,14 @@ int main(int argc,char* argv[]) {
       cout << helpfile;
 
     } else {
-      printf("You Must Select A Search Type!\nUSAGE: ./stalker -f   <-- Fast Search\n       ./stalker -a   <-- Search All DBs");
+      printf("You Must Select A Search Type!\n");
+      cout << helpfile;
       return 1;
     }
 
   } if (argc<2) {
-    printf("You Must Select A Search Type!\nUSAGE: ./stalker -f   <-- Fast Search\n       ./stalker -a   <-- Search All DBs");
+    printf("You Must Select A Search Type!\n");
+    cout << helpfile;
     return 1;
   }
 }
