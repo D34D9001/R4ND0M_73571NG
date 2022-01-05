@@ -23,12 +23,12 @@ const char *logo =
 
 const char *helpfile =
 "USAGE:\n"
-"$ ./stalker -h/--help"
+"$ ./stalker -h/--help\n"
 "$ ./stalker -f          <-- Run Stalker In Fast Mode\n"
 "$ ./stalker -a          <-- Search All Databases\n"
 "$ ./stalker -e          <-- Only check search engines.\n"
 "$ ./stalker -s          <-- Only check social media.\n"
-"$ ./stalker --arrest    <-- Check for arrest records"\n;
+"$ ./stalker --arrest    <-- Check for arrest records\n";
 
 string fname;
 string mname;
