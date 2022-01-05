@@ -22,9 +22,9 @@ about another online.
 
 [USAGE]:
 
-`$ ./stalker -f`          <-- Stalker will search it's top 5 DBs.//
-`$ ./stalker -a`          <-- Stalker will search it's entire DB list.//
-`$ ./stalker -h/--help`   <-- Display help//
+`$ ./stalker -f`          <-- Stalker will search it's top 5 DBs.  
+`$ ./stalker -a`          <-- Stalker will search it's entire DB list.  
+`$ ./stalker -h/--help`   <-- Display help.  
 =======================================================================
 
   * [LEGAL]: By using this program you agree that you and
