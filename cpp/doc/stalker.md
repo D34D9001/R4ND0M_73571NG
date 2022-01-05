@@ -10,7 +10,7 @@
 `Stalker` is a recon tool used to gather information on a target.
 The user will need to know the name, last known city, and state
 of the target to search Stalkers database list. At the present
-version (v1.0.1-alpha), Stalker can search up to 18 databases to
+version (v1.0.2-alpha), Stalker can search up to 28 databases to
 retrieve things such as; *addresses*, *phone numbers*, *family*,
 *associates*, *social media accounts*, *email addresses* and more.
 >The creator of this program takes no responsibility, legal or

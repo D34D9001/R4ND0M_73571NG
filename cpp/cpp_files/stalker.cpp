@@ -8,7 +8,7 @@ Created By: 73RM1N41
 Jan. 04, 2022
 
 Updated: Jan. 04, 2022
-         v1.0.1-alpha
+         v1.0.2-alpha
 */
 
 const char *logo =
