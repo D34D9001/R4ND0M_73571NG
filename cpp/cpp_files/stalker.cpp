@@ -57,6 +57,7 @@ std::string beenverified;
 std::string unmask;
 std::string pubrec360;
 std::string arrests;
+std::string onlsrc;
 
 void var_set() {
   printf(logo);
@@ -118,6 +119,8 @@ int main(int argc,char* argv[]) {
       std::string unmask = firefox + "https://unmask.com/" + fname + "-" + lname + "/";
       std::string pubrec360 = firefox + "https://www.publicrecords360.com/" + state + "/people-search/" + lname + "/" + fname + "?city=" + city;
       std::string arrests = firefox + "https://" + state + ".arrests.org/search.php?fname=" + fname + "\\&lname=" + lname;
+      std::string onlsrc = firefox + "https://www.publicrecords.onlinesearches.com/name/" + fname + "-" + lname + "/" + state + "/?category=public";
+      std::string yahoo = firefox + "https://search.yahoo.com/search?p=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
 
     //                                             DATABASE
     //                                             ========
@@ -147,7 +150,10 @@ int main(int argc,char* argv[]) {
       system(unmask.c_str());                   // Unmask.com
       system(pubrec360.c_str());                // PublicRecords360.com
       system(arrests.c_str());                  // Arrests.org
-
+      printf("Giving The Browser A Break...\n");
+      sleep(3);
+      system(onlsrc.c_str());
+      system(yahoo.c_str());
       return 0;
 
     } else if(std::string(argv[1]) == "-e") {
@@ -155,28 +161,37 @@ int main(int argc,char* argv[]) {
       std::string google = firefox + "https://www.google.com/search?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
       std::string yandex = firefox + "https://www.yandex.com/search/smart/?text=" + fname + "+" + mname + "+" + lname;
       std::string bing = firefox + "https://www.bing.com/search?q=" + fname + "+" + lname + "+" + city + "+" + state;
+      std::string yahoo = firefox + "https://search.yahoo.com/search?p=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
+
 
       system(google.c_str());
       system(bing.c_str());
       system(yandex.c_str());
+      system(yahoo.c_str());
+      return 0;
 
     } else if(std::string(argv[1]) == "-s") {
       var_set();
       std::string facebook = firefox + "https://www.facebook.com/public/" + fname + "-" + lname;
       system(facebook.c_str());                 // Facebook.com
+      return 0;
 
     } else if(std::string(argv[1]) == "--arrest") {
       var_set();
       std::string arrests = firefox + "https://" + state + ".arrests.org/search.php?fname=" + fname + "\\&lname=" + lname;
+
       system(arrests.c_str());                 // Arrests.com
+      return 0;
 
     } else if(std::string(argv[1]) == "-h") {
       printf(logo);
       cout << helpfile;
+      return 0;
 
     } else if(std::string(argv[1]) == "--help") {
       printf(logo);
       cout << helpfile;
+      return 0;
 
     } else {
       printf("You Must Select A Search Type!\n");
