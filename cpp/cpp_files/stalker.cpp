@@ -24,11 +24,11 @@ const char *logo =
 const char *helpfile =
 "USAGE:\n"
 "$ ./stalker -h/--help\n"
-"$ ./stalker -f          <-- Run Stalker In Fast Mode\n"
-"$ ./stalker -a          <-- Search All Databases\n"
-"$ ./stalker -e          <-- Only check search engines.\n"
-"$ ./stalker -s          <-- Only check social media.\n"
-"$ ./stalker --arrest    <-- Check for arrest records\n";
+"$ ./stalker -fast       <-- Run Stalker In Fast Mode\n"
+"$ ./stalker -all        <-- Search All Databases\n"
+"$ ./stalker -se         <-- Only check search engines.\n"
+"$ ./stalker -social     <-- Only check social media.\n"
+"$ ./stalker -arrest     <-- Check for arrest records\n";
 
 string fname;
 string mname;
@@ -79,7 +79,7 @@ void var_set() {
 int main(int argc,char* argv[]) {
 
   if(argc==2) {
-    if(std::string(argv[1]) == "-f") {
+    if(std::string(argv[1]) == "-fast") {
       var_set();
       std::string google = firefox + "https://www.google.com/search?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
       std::string facebook = firefox + "https://www.facebook.com/public/" + fname + "-" + lname;
@@ -97,7 +97,7 @@ int main(int argc,char* argv[]) {
       system(fouroneone.c_str());               // 411.com
       return 0;
 
-    } else if(std::string(argv[1]) == "-a") {
+    } else if(std::string(argv[1]) == "-all") {
       var_set();
       std::string google = firefox + "https://www.google.com/search?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
       std::string facebook = firefox + "https://www.facebook.com/public/" + fname + "-" + lname;
@@ -121,6 +121,7 @@ int main(int argc,char* argv[]) {
       std::string arrests = firefox + "https://" + state + ".arrests.org/search.php?fname=" + fname + "\\&lname=" + lname;
       std::string onlsrc = firefox + "https://www.publicrecords.onlinesearches.com/name/" + fname + "-" + lname + "/" + state + "/?category=public";
       std::string yahoo = firefox + "https://search.yahoo.com/search?p=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
+      std::string duck = firefox + "https://duckduckgo.com/?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
 
     //                                             DATABASE
     //                                             ========
@@ -154,29 +155,31 @@ int main(int argc,char* argv[]) {
       sleep(3);
       system(onlsrc.c_str());
       system(yahoo.c_str());
+      system(duck.c_str());
       return 0;
 
-    } else if(std::string(argv[1]) == "-e") {
+    } else if(std::string(argv[1]) == "-se") {
       var_set();
       std::string google = firefox + "https://www.google.com/search?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
       std::string yandex = firefox + "https://www.yandex.com/search/smart/?text=" + fname + "+" + mname + "+" + lname;
       std::string bing = firefox + "https://www.bing.com/search?q=" + fname + "+" + lname + "+" + city + "+" + state;
       std::string yahoo = firefox + "https://search.yahoo.com/search?p=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
-
+      std::string duck = firefox + "https://duckduckgo.com/?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
 
       system(google.c_str());
       system(bing.c_str());
       system(yandex.c_str());
       system(yahoo.c_str());
+      system(duck.c_str());
       return 0;
 
-    } else if(std::string(argv[1]) == "-s") {
+    } else if(std::string(argv[1]) == "-social") {
       var_set();
       std::string facebook = firefox + "https://www.facebook.com/public/" + fname + "-" + lname;
       system(facebook.c_str());                 // Facebook.com
       return 0;
 
-    } else if(std::string(argv[1]) == "--arrest") {
+    } else if(std::string(argv[1]) == "-arrest") {
       var_set();
       std::string arrests = firefox + "https://" + state + ".arrests.org/search.php?fname=" + fname + "\\&lname=" + lname;
 

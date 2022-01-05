@@ -22,11 +22,11 @@ about another online.
 
 [USAGE]:
 
-`$ ./stalker -f`          <-- Stalker will search it's top 5 DBs.  
-`$ ./stalker -a`          <-- Stalker will search it's entire DB list.  
-`$ ./stalker -e`          <-- Stalker will only check search engines.  
-`$ ./stalker -s`          <-- Stalker will only check social media.
-`$ ./stalker --arrest`    <-- Stalker will check for arrest records.
+`$ ./stalker -fast`       <-- Stalker will search it's top 5 DBs.  
+`$ ./stalker -all`        <-- Stalker will search it's entire DB list.  
+`$ ./stalker -se`         <-- Stalker will only check search engines.  
+`$ ./stalker -social`     <-- Stalker will only check social media.
+`$ ./stalker -arrest`     <-- Stalker will check for arrest records.
 `$ ./stalker -h/--help`   <-- Display help.  
 =======================================================================
 
