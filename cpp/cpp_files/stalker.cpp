@@ -35,9 +35,9 @@ const char *helpfile =
 "$ ./stalker -h/--help"
 "$ ./stalker -f          <-- Run Stalker In Fast Mode\n"
 "$ ./stalker -a          <-- Search All Databases\n"
-"$ ./stalker -e          <-- Only check search engines."
-"$ ./stalker -s          <-- Only check social media."
-"$ ./stalker --arrest    <-- Check for arrest records";
+"$ ./stalker -e          <-- Only check search engines.\n"
+"$ ./stalker -s          <-- Only check social media.\n"
+"$ ./stalker --arrest    <-- Check for arrest records"\n;
 
 string fname;
 string mname;
