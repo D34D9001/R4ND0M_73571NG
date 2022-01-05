@@ -1,6 +1,5 @@
 #include <iostream>
 #include <unistd.h>
-#include <map>
 
 using namespace std;
 
@@ -42,37 +41,13 @@ string lname;
 string city;
 string state;
 
-/*
-Two dictionaries need to be created.
-One to house the database list, and the
-other to define the abbreviations for
-state names to increase number of sources
-that can be loaded by Stalker.
-*/
-
 int main(int argc,char* argv[]) {
 
   if(argc==2) {
     if(std::string(argv[1]) == "-f") {
-      /*
-      The user is required to open the webbrowser.
-      If this function is handled by the program, it
-      has a tendancy to freeze, only opening webpages
-      after the previous window has been closed. This
-      needs to be fixed to increase usability and speed.
-      */
       printf(logo);
       printf("[!] Please Open Your Internet Browser...\n   Press return when ready.\n");
       cin.get();
-
-
-      /*
-      The user is required to pass the targets information
-      to the program after the browser has been opened. The
-      user should be able to choose whether to pass the information
-      this way or to pass the information as arguments when the
-      program is initialized in the terminal.
-      */
       printf("[*] Enter Targets Information...\n");
       printf("\n   First Name:\n   :>> ");
       cin >> fname;
@@ -84,45 +59,26 @@ int main(int argc,char* argv[]) {
       cin >> city;
       printf("\n   State:\n   :>> ");
       cin >> state;
-      /*
-      Strings defining the webbrowser the program
-      should use as well as the databases to be loaded.
-      */
-
       string firefox = "/usr/bin/firefox ";
       std::string google = firefox + "https://www.google.com/search?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
       std::string facebook = firefox + "https://www.facebook.com/public/" + fname + "-" + lname;
       std::string spokeo = firefox + "https://www.spokeo.com/" + fname + "-" + lname + "/" + state + "/" + city;
       std::string beenverified = firefox + "https://www.beenverified.com/people/" + fname + "-" + lname + "/";
       std::string fouroneone = firefox + "https://www.411.com/name/" + fname + "-" + lname + "/" + city + "-" + state;
+
     //                                             DATABASE
     //                                             ========
       system(google.c_str());                   // Google.com
       system(facebook.c_str());                 // Facebook.com
       system(spokeo.c_str());                   // Spokeo.com
-      system(beenverified.c_str());              // BeenVerified.com
+      system(beenverified.c_str());             // BeenVerified.com
       system(fouroneone.c_str());               // 411.com
       return 0;
+
     } else if(std::string(argv[1]) == "-a") {
-      /*
-      The user is required to open the webbrowser.
-      If this function is handled by the program, it
-      has a tendancy to freeze, only opening webpages
-      after the previous window has been closed. This
-      needs to be fixed to increase usability and speed.
-      */
       printf(logo);
       printf("[!] Please Open Your Internet Browser...\n   Press return when ready.\n");
       cin.get();
-
-
-      /*
-      The user is required to pass the targets information
-      to the program after the browser has been opened. The
-      user should be able to choose whether to pass the information
-      this way or to pass the information as arguments when the
-      program is initialized in the terminal.
-      */
       printf("[*] Enter Targets Information...\n");
       printf("\n   First Name:\n   :>> ");
       cin >> fname;
@@ -134,13 +90,8 @@ int main(int argc,char* argv[]) {
       cin >> city;
       printf("\n   State:\n   :>> ");
       cin >> state;
-      /*
-      Strings defining the webbrowser the program
-      should use as well as the databases to be loaded.
-      */
 
       string firefox = "/usr/bin/firefox ";
-
       std::string google = firefox + "https://www.google.com/search?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
       std::string facebook = firefox + "https://www.facebook.com/public/" + fname + "-" + lname;
       std::string spokeo = firefox + "https://www.spokeo.com/" + fname + "-" + lname + "/" + state + "/" + city;
@@ -159,12 +110,6 @@ int main(int argc,char* argv[]) {
       std::string tps = firefox + "https://www.truepeoplesearch.com/results?name=" + fname + "%20" + lname + "&citystatezip=" + city + ",%20" + state;
       std::string beenverified = firefox + "https://www.beenverified.com/people/" + fname + "-" + lname + "/";
       std::string unmask = firefox + "https://unmask.com/" + fname + "-" + lname + "/";
-
-      /*
-      A while loop should be created to open
-      the databases in the browser. The loop should
-      use a list or the url dictionary to minimize code.
-      */
 
     //                                             DATABASE
     //                                             ========
@@ -194,16 +139,20 @@ int main(int argc,char* argv[]) {
       system(unmask.c_str());                   // Unmask.com
 
       return 0;
+
     } else if(std::string(argv[1]) == "-h") {
       printf(logo);
       cout << helpfile;
+
     } else if(std::string(argv[1]) == "--help") {
       printf(logo);
       cout << helpfile;
+
     } else {
       printf("You Must Select A Search Type!\nUSAGE: ./stalker -f   <-- Fast Search\n       ./stalker -a   <-- Search All DBs");
       return 1;
     }
+
   } if (argc<2) {
     printf("You Must Select A Search Type!\nUSAGE: ./stalker -f   <-- Fast Search\n       ./stalker -a   <-- Search All DBs");
     return 1;
