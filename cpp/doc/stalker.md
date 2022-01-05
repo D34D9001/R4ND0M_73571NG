@@ -27,13 +27,13 @@ about another online.
 `$ ./stalker -h/--help`   <-- Display help.  
 =======================================================================
 
-^- [LEGAL]: By using this program you agree that you and
+- [LEGAL]: By using this program you agree that you and
   only you [the user] are responsible for your actions and your use of
   this program and that the developer is in no way accountable or
   responsible for any activities, illegal or otherwise, partaken in
   by the user.  
 
-^- [LICENSE]: MIT License
+- [LICENSE]: MIT License
   Copyright (c) 2022 D34D9001
 
   Permission is hereby granted, free of charge, to any person obtaining a copy
