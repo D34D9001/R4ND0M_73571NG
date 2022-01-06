@@ -1,8 +1,8 @@
 <ul>
   <li>Home</li>
-  <li>C++
+  <li>Cpp
     <ul>
-      <li>C++:Stalker</li>
+      <li>Cpp:Stalker</li>
     </ul>
 </li>
 </ul>
