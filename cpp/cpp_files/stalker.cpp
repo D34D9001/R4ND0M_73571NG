@@ -251,14 +251,12 @@ int main(int argc,char* argv[]) {
       std::string facebook = firefox + "https://www.facebook.com/public/" + fname + "-" + lname;
       std::string twitter = firefox + "https://twitter.com/search?q=" + fname + "%20" + lname + "\\&f=user";
       std::string fouroneone = firefox + "https://www.411.com/name/" + fname + "-" + lname + "/" + city + "-" + state;
-      std::string beenverified = firefox + "https://www.beenverified.com/people/" + fname + "-" + lname + "/";
       std::string arrests = firefox + "https://" + state + ".arrests.org/search.php?fname=" + fname + "\\&lname=" + lname;
 
       system(arrests.c_str());                  // Arrests.org
       system(google.c_str());                   // Google.com
       system(facebook.c_str());                 // Facebook.com
       system(twitter.c_str());                  // Twitter.com
-      system(beenverified.c_str());             // BeenVerified.com
       system(fouroneone.c_str());               // 411.com
       return 0;
 
