@@ -1,5 +1,6 @@
 #include <iostream>
 #include <unistd.h>
+#include <stdlib.h>
 
 using namespace std;
 
@@ -35,6 +36,7 @@ string mname;
 string lname;
 string city;
 string state;
+string state_abv;
 string firefox = "/usr/bin/firefox ";
 
 std::string google;
@@ -59,7 +61,191 @@ std::string pubrec360;
 std::string arrests;
 std::string onlsrc;
 
-void var_set() {
+int State(string state) {
+  if(state == "Alabama") {
+    state_abv = "AL";
+    return 0;
+  } else if(state == "Alaska") {
+    state_abv = "AK";
+    return 0;
+  } else if(state == "American Samoa") {
+    state_abv = "AS";
+    return 0;
+  } else if(state == "Arizona") {
+    state_abv = "AZ";
+    return 0;
+  } else if(state == "Arkansas") {
+    state_abv = "AR";
+    return 0;
+  } else if(state == "California") {
+    state_abv = "CA";
+    return 0;
+  } else if(state == "Colorado") {
+    state_abv = "CO";
+    return 0;
+  } else if(state == "Connecticut") {
+    state_abv = "CT";
+    return 0;
+  } else if(state == "Delaware") {
+    state_abv = "DE";
+    return 0;
+  } else if(state == "District Of Columbia") {
+    state_abv = "DC";
+    return 0;
+  } else if(state == "Federated States Of Micronesia") {
+    state_abv = "FM";
+    return 0;
+  } else if(state == "Florida") {
+    state_abv = "FL";
+    return 0;
+  } else if(state == "Georgia") {
+    state_abv = "GA";
+    return 0;
+  } else if(state == "Guam") {
+    state_abv = "GU";
+    return 0;
+  } else if(state == "Hawaii") {
+    state_abv = "HI";
+    return 0;
+  } else if(state == "Idaho") {
+    state_abv = "ID";
+    return 0;
+  } else if(state == "Illinois") {
+    state_abv = "IL";
+    return 0;
+  } else if(state == "Indiana") {
+    state_abv = "IN";
+    return 0;
+  } else if(state == "Iowa") {
+    state_abv = "IA";
+    return 0;
+  } else if(state == "Kansas") {
+    state_abv = "KS";
+    return 0;
+  } else if(state == "Kentucky") {
+    state_abv = "KY";
+    return 0;
+  } else if(state == "Louisiana") {
+    state_abv = "LA";
+    return 0;
+  } else if(state == "Maine") {
+    state_abv = "ME";
+    return 0;
+  } else if(state == "Marshall Islands") {
+    state_abv = "MH";
+    return 0;
+  } else if(state == "Maryland") {
+    state_abv = "MD";
+    return 0;
+  } else if(state == "Massachusetts") {
+    state_abv = "MA";
+    return 0;
+  } else if(state == "Michigan") {
+    state_abv = "MI";
+    return 0;
+  } else if(state == "Minnesota") {
+    state_abv = "MN";
+    return 0;
+  } else if(state == "Mississippi") {
+    state_abv = "MS";
+    return 0;
+  } else if(state == "Missouri") {
+    state_abv = "MO";
+    return 0;
+  } else if(state == "Montana") {
+    state_abv = "MT";
+    return 0;
+  } else if(state == "Nebraska") {
+    state_abv = "NE";
+    return 0;
+  } else if(state == "Nevada") {
+    state_abv = "NV";
+    return 0;
+  } else if(state == "New Hampshire") {
+    state_abv = "NH";
+    return 0;
+  } else if(state == "New Jersey") {
+    state_abv = "NJ";
+    return 0;
+  } else if(state == "New Mexico") {
+    state_abv = "NM";
+    return 0;
+  } else if(state == "New York") {
+    state_abv = "NY";
+    return 0;
+  } else if(state == "North Carolina") {
+    state_abv = "NC";
+    return 0;
+  } else if(state == "North Dakota") {
+    state_abv = "ND";
+    return 0;
+  } else if(state == "Northern Mariana Islands") {
+    state_abv = "MP";
+    return 0;
+  } else if(state == "Ohio") {
+    state_abv = "OH";
+    return 0;
+  } else if(state == "Oklahoma") {
+    state_abv = "OK";
+    return 0;
+  } else if(state == "Oregon") {
+    state_abv = "OR";
+    return 0;
+  } else if(state == "Palau") {
+    state_abv = "PW";
+    return 0;
+  } else if(state == "Pennsylvania") {
+    state_abv = "PA";
+    return 0;
+  } else if(state == "Puerto Rico") {
+    state_abv = "PR";
+    return 0;
+  } else if(state == "Rhode Island") {
+    state_abv = "RI";
+    return 0;
+  } else if(state == "South Carolina") {
+    state_abv = "SC";
+    return 0;
+  } else if(state == "South Dakota") {
+    state_abv = "SD";
+    return 0;
+  } else if(state == "Tennessee") {
+    state_abv = "TN";
+    return 0;
+  } else if(state == "Texas") {
+    state_abv = "TX";
+    return 0;
+  } else if(state == "Utah") {
+    state_abv = "UT";
+    return 0;
+  } else if(state == "Vermont") {
+    state_abv = "VT";
+    return 0;
+  } else if(state == "Virgin Islands") {
+    state_abv = "VI";
+    return 0;
+  } else if(state == "Virginia") {
+    state_abv = "VA";
+    return 0;
+  } else if(state == "Washington") {
+    state_abv = "WA";
+    return 0;
+  } else if(state == "West Virginia") {
+    state_abv = "WV";
+    return 0;
+  } else if(state == "Wisconsin") {
+    state_abv = "WI";
+    return 0;
+  } else if(state == "Wyoming") {
+    state_abv = "WY";
+    return 0;
+  } else {
+    printf("INVALID STATE!\n");
+    return 1;
+  }
+}
+
+int var_set() {
   printf(logo);
   printf("[!] Please Open Your Internet Browser...\n   Press return when ready.\n");
   cin.get();
@@ -74,6 +260,8 @@ void var_set() {
   cin >> city;
   printf("\n   State:\n   :>> ");
   cin >> state;
+  State(state);
+  return 0;
 }
 
 int main(int argc,char* argv[]) {
@@ -209,6 +397,7 @@ int main(int argc,char* argv[]) {
       std::string arrests = firefox + "https://" + state + ".arrests.org/search.php?fname=" + fname + "\\&lname=" + lname;
 
       system(arrests.c_str());                 // Arrests.com
+
       return 0;
 
     } else if(std::string(argv[1]) == "-h") {
