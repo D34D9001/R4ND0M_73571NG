@@ -9,7 +9,7 @@ Created By: 73RM1N41
 Jan. 04, 2022
 
 Updated: Jan. 04, 2022
-         v1.0.2-alpha
+         v1.1.0-beta
 */
 
 const char *logo =
