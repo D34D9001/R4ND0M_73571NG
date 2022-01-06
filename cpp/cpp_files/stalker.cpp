@@ -39,28 +39,6 @@ string state;
 string state_abv;
 string firefox = "/usr/bin/firefox ";
 
-std::string google;
-std::string facebook;
-std::string spokeo;
-std::string people_search;
-std::string fouroneone;
-std::string yandex;
-std::string mylife;
-std::string peekyou;
-std::string fps;
-std::string spf;
-std::string socialsearcher;
-std::string socialmention;
-std::string bing;
-std::string sbs;
-std::string boardreader;
-std::string tps;
-std::string beenverified;
-std::string unmask;
-std::string pubrec360;
-std::string arrests;
-std::string onlsrc;
-
 int State(string state) {
   if(state == "Alabama") {
     state_abv = "AL";
@@ -275,8 +253,7 @@ int main(int argc,char* argv[]) {
       std::string fouroneone = firefox + "https://www.411.com/name/" + fname + "-" + lname + "/" + city + "-" + state;
       std::string beenverified = firefox + "https://www.beenverified.com/people/" + fname + "-" + lname + "/";
       std::string arrests = firefox + "https://" + state + ".arrests.org/search.php?fname=" + fname + "\\&lname=" + lname;
-    //                                             DATABASE
-    //                                             ========
+
       system(arrests.c_str());                  // Arrests.org
       system(google.c_str());                   // Google.com
       system(facebook.c_str());                 // Facebook.com
@@ -316,9 +293,6 @@ int main(int argc,char* argv[]) {
       std::string instagram = firefox + "https://www.google.com/search?q=" + fname + "+" + lname + "+Instagram";
       std::string pinterest = firefox + "https://www.google.com/search?q=" + fname + "+" + lname + "+Pinterest";
 
-
-    //                                             DATABASE
-    //                                             ========
       system(google.c_str());                   // Google.com
       system(facebook.c_str());                 // Facebook.com
       system(spokeo.c_str());                   // Spokeo.com
@@ -343,19 +317,19 @@ int main(int argc,char* argv[]) {
       system(tps.c_str());                      // TruePeopleSearch.com
       system(beenverified.c_str());             // BeenVerified.com
       system(unmask.c_str());                   // Unmask.com
-      system(ussearch.c_str());                // PublicRecords360.com
+      system(ussearch.c_str());                 // USSearch.com
       system(arrests.c_str());                  // Arrests.org
       printf("Giving The Browser A Break...\n");
       sleep(3);
-      system(onlsrc.c_str());
-      system(yahoo.c_str());
-      system(duck.c_str());
-      system(tiktok.c_str());
-      system(youtube.c_str());
+      system(onlsrc.c_str());                   // PublicRecords.OnlineSearches.com
+      system(yahoo.c_str());                    // Yahoo.com
+      system(duck.c_str());                     // DuckDuckGo.com
+      system(tiktok.c_str());                   // TikTok.com
+      system(youtube.c_str());                  // Youtube.com
       printf("Giving The Browser A Break...\n");
       sleep(3);
-      system(instagram.c_str());
-      system(pinterest.c_str());
+      system(instagram.c_str());                // Instagram.com
+      system(pinterest.c_str());                // Pinterest.com
       return 0;
 
     } else if(std::string(argv[1]) == "-se") {
@@ -366,11 +340,11 @@ int main(int argc,char* argv[]) {
       std::string yahoo = firefox + "https://search.yahoo.com/search?p=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
       std::string duck = firefox + "https://duckduckgo.com/?q=" + fname + "+" + mname + "+" + lname + "+" + city + "+" + state;
 
-      system(google.c_str());
-      system(bing.c_str());
-      system(yandex.c_str());
-      system(yahoo.c_str());
-      system(duck.c_str());
+      system(google.c_str());     // Google.com
+      system(bing.c_str());       // Bing.com
+      system(yandex.c_str());     // Yandex.com
+      system(yahoo.c_str());      // Yahoo.com
+      system(duck.c_str());       // DuckDuckGo.com
       return 0;
 
     } else if(std::string(argv[1]) == "-social") {
@@ -382,13 +356,12 @@ int main(int argc,char* argv[]) {
       std::string instagram = firefox + "https://www.google.com/search?q=" + fname + "+" + lname + "+Instagram";
       std::string pinterest = firefox + "https://www.google.com/search?q=" + fname + "+" + lname + "+Pinterest";
 
-
       system(facebook.c_str());                 // Facebook.com
       system(twitter.c_str());                  // Twitter.com
       system(tiktok.c_str());                   // TikTok.com
       system(youtube.c_str());                  // Youtube.com
-      system(instagram.c_str());
-      system(pinterest.c_str());
+      system(instagram.c_str());                // Instagram.com
+      system(pinterest.c_str());                // Pinterest.com
 
       return 0;
 
