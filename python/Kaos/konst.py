@@ -17,6 +17,7 @@ if len(std_out) >= 1:
     USER = str(std_out)
 else:
     USER = str(std_err)
+
 KAOS_VERSION = "Kaos_v3.5.601 (Beta)"
 ENVIRONMENT = os.environ.copy()
 OP_SYS = subprocess.check_output(["uname", "-r"])
