@@ -3,7 +3,7 @@
 """
     Created: Aug 2017
 
-    @author: 73RM1N41@9R0GR4M13
+    @author: D34D9001@9R0GR4M13
 
 This Is The Kaos Error Integration Module, AKA: Kerri
 The Exceptions Defined Here Were Designed To Allow A Greater Output From

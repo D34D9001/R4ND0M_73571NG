@@ -18,7 +18,7 @@ def __str__():
 
     Created: Aug 2017
 
-    @author: 73RM1N41@9R0GR4M13
+    @author: D34D9001@9R0GR4M13
 
 
     This module was created with both Kali and (Black)Arch Linux. Some functions may not

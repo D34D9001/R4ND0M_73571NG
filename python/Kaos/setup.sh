@@ -19,7 +19,7 @@ echo "
 	*                       *                                *                
 	 **                      **                               **"
 echo "                                                                                 by:  ";
-echo "                                                                              73RM1N41";
+echo "                                                                              D34D9001";
 echo "############################################################################################";
 echo "                   Kaos Is Still In Development... Please Be Patient.    (:                ";
 sleep 1;

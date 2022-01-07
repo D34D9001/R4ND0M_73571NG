@@ -2,7 +2,7 @@
  title:    Kaos
  section:    1
  header:    User Manual
- footer:    Created By: 73RM1N41@9R0GR4M13
+ footer:    Created By: D34D9001@9R0GR4M13
  date:    November 26, 2021
  ---
 # NAME
@@ -44,4 +44,4 @@
  : G00G13 offers detailed information for Google hacking. This section gives the user information about search keywords and ways to find specific information very quickly. This information is available through the Offensive Security website but also offered here, in an unaffiliated way, for user convenience.  
 
  **914Y800K**  
- : 914Y800K is 73RM1N41's personal playbook. This is both incomplete and probably inaccurate and outdated but it has been left here to be updated in the future. Nothing in this section should be expected to work and may in fact cause irreparable damage to the users operating system. **USE AT YOUR OWN RISK!!!**   
+ : 914Y800K is D34D9001's personal playbook. This is both incomplete and probably inaccurate and outdated but it has been left here to be updated in the future. Nothing in this section should be expected to work and may in fact cause irreparable damage to the users operating system. **USE AT YOUR OWN RISK!!!**   
