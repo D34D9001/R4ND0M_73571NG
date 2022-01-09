@@ -3133,6 +3133,43 @@ def main_misc():
         else:
             return std_out
 
+    def serv_sec(winName):
+        newWin = Toplevel()
+        newWin.geometry("750x750")
+        newWin.title("Running Services Security Information")
+        menubar = Menu(root)
+        savemenu = Menu(menubar, tearoff=0)
+        savemenu.add_command(label="Save", command=lambda: save_file(output))
+        menubar.add_cascade(label="File", menu=savemenu)
+        newWin.configure(background='black', menu=menubar)
+        T = Text(newWin, height=500, width=250, bg="black", fg="lime")
+        T.pack()
+        services = subprocess.Popen(["/usr/bin/systemd-analyze", "security"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        std_out, std_err = services.communicate()
+        if len(std_out) >= 1:
+            T.insert(END, std_out)
+        else:
+            T.insert(END, std_err)
+
+    def sec_scan(winName):
+        newWin = Toplevel()
+        newWin.geometry("750x750")
+        newWin.title("Lynis Security Scan")
+        menubar = Menu(root)
+        savemenu = Menu(menubar, tearoff=0)
+        savemenu.add_command(label="Save", command=lambda: save_file(std_out))
+        menubar.add_cascade(label="File", menu=savemenu)
+        newWin.configure(background='black', menu=menubar)
+        T = Text(newWin, height=500, width=250, bg="black", fg="lime")
+        T.pack()
+        msgbx("Scanning...", "Please be patient, this will take a while...")
+        scan_data = subprocess.Popen(["sudo", "lynis", "audit", "system", "--verbose"], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        std_out, std_err = scan_data.communicate()
+        if len(std_out) >= 1:
+            T.insert(END, std_out)
+        else:
+            T.insert(END, std_err)
+
     def serv_stat(winName):
         def get_data(winName):
             service_name = info.get()
@@ -4014,18 +4051,18 @@ def main_misc():
         b8 = Button(nWin, text="Serv. List", bg="black", fg="lime",
                     command=lambda : sv_lst(nWin))
         b8.grid(row = 3, column = 4, padx=3, pady=3)
-#
-        b9 = Button(nWin, text="Kali Help", bg="black", fg="lime",
-                    command=lambda : kali_help(nWin))
+
+        b9 = Button(nWin, text="Serv. Security", bg="black", fg="lime",
+                    command=lambda : serv_sec(nWin))
         b9.grid(row = 4, column = 1, padx=3, pady=3)
-##
-#        b10 = Button(nWin, text="", bg="black", fg="lime",
-#                    command=lambda : (nWin))
-#        b10.grid(row = 4, column = 2, padx=3, pady=3)
-##
-#        b11 = Button(nWin, text="", bg="black", fg="lime",
-#                    command=lambda : (nWin))
-#        b11.grid(row = 4, column = 3, padx=3, pady=3)
+#
+        b10 = Button(nWin, text="Sec Scan", bg="black", fg="lime",
+                    command=lambda : sec_scan(nWin))
+        b10.grid(row = 4, column = 2, padx=3, pady=3)
+
+        b11 = Button(nWin, text="Kali Help", bg="black", fg="lime",
+                    command=lambda : kali_help(nWin))
+        b11.grid(row = 4, column = 3, padx=3, pady=3)
 ##
 #        b12 = Button(nWin, text="", bg="black", fg="lime",
 #                    command=lambda : (nWin))
