@@ -3,6 +3,8 @@
 =begin
 This script will return a random poem from the specified author. To get a list
 of available authors, please see ../python/poetpy.py
+
+This is really buggy. Please don't expect perfection... :/
 =end
 
 require 'httparty'

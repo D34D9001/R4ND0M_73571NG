@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
+
+"""
+This script will get a poem from poetrydb.org and display
+it in the terminal. You can specify an author and a title or just a title.
+To see all authors or all titles, type: $ ./poetpy.py -w [for authors] /-p [for titles]
+"""
+
 import requests
-#import urllib
 import sys
 import json
 import getopt
@@ -29,10 +35,9 @@ try:
             if name in ['-w', '--writers']:
                 headers = {"User-Agent": "PoetPy"}
                 data = requests.get("https://poetrydb.org/author", headers=headers)
-                print("""###################################################\n
-                    Authors                             \n
-        ###################################################
-                      """)
+                print("###################################################\n")
+                print("                      Authors                             \n")
+                print("###################################################\n")
                 for item in data.json()['authors']:
                     print(item)
                 sys.exit()
@@ -40,10 +45,9 @@ try:
             elif name in ['-p', '--poems']:
                 headers = {"User-Agent": "PoetPy"}
                 data = requests.get("https://poetrydb.org/title", headers=headers)
-                print("""###################################################\n
-                     Titles                             \n
-        ###################################################
-                      """)
+                print("###################################################\n")
+                print("                      Titles                             \n")
+                print("###################################################\n")
                 for item in data.json()['titles']:
                     print(item)
                 sys.exit()
@@ -56,21 +60,19 @@ try:
         if len(author) > 1:
             headers = {"User-Agent": "PoetPy"}
             data = requests.get("https://poetrydb.org/author,title/%s;%s/lines.json" % (author, title), headers=headers)
-            print("""###################################################\n
-                    %s                             \n
-                    By: %s                         \n
-    ###################################################
-                  """ % (title, author))
+            print("###################################################\n")
+            print("                      %s                             \n" % title)
+            print("                  By: %s" % author)
+            print("###################################################\n")
             for item in data.json()[0]['lines']:
                 print(item)
 
         else:
             headers = {"User-Agent": "PoetPy"}
             data = requests.get("https://poetrydb.org/title/%s/lines.json" % (title), headers=headers)
-            print("""###################################################\n
-                        %s                         \n
-    ###################################################
-                  """ % title)
+            print("###################################################\n")
+            print("                      %s                             \n" % title)
+            print("###################################################\n")
             for item in data.json()[0]['lines']:
                 print(item)
 

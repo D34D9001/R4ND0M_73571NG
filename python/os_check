@@ -4,6 +4,8 @@
 Created on Thu Aug 17 19:19:37 2017
 
 @author: D34D9001
+
+This script will bring back loads of information about your system.
 """
 
 #!/usr/bin/env python
