@@ -1,21 +1,8 @@
 #!/usr/bin/env python3
 """
-Examples
-
-single verse
-    https://bible-api.com/john 3:16
-abbreviated book name
-    https://bible-api.com/jn 3:16
-verse range
-    https://bible-api.com/romans+12:1-2
-multiple ranges
-    https://bible-api.com/romans 12:1-2,5-7,9,13:1-9&10
-different translation
-    https://bible-api.com/john 3:16?translation=kjv
-verse numbers
-    https://bible-api.com/john 3:16?verse_numbers=true
-jsonp
-    https://bible-api.com/john+3:16?callback=func
+Type a book name, number, and a verse [range]
+and bibler will return that bible verse. {KJV}
+EX: ./bibler -n John -b 3 -v 16-18
 """
 import requests
 import sys
