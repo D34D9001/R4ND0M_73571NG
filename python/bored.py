@@ -2,7 +2,11 @@
 
 """
 Are you bored?? This program will generate
-a random activity for you to do.
+a random activity for you to do. Got friends?
+Tell the program how many with the -f flag.
+
+*8 friends max [The more friends you have the
+less diverse your options will be.]
 
 Created With: 'The Bored API' [https://www.boredapi.com/]
 Created By: D34D9001
