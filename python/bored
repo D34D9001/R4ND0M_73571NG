@@ -17,10 +17,14 @@ from termcolor import colored
 
 argv = sys.argv[1:]
 
+if len(argv) == 0:
+    print("[Invalid] Please Try Again\nbored -f [# of friends]")
+    sys.exit()
+
 try:
     total = len(sys.argv)
     if int(total) < 1:
-        print("[Invalid] Please Try Again\nbored [# of friends]")
+        print("[Invalid] Please Try Again\nbored -s/-f [# of friends]")
         sys.exit()
     else:
         options, args = getopt.getopt(argv, "f:sh",
@@ -30,9 +34,14 @@ try:
         for name, value in options:
             if name in ['-f', '--friends']:
                 friends = value
+
+                if int(friends) <= 1:
+                    print("You have no friends...\nTry: ./bored -s")
+                    sys.exit()
                 if int(friends) >= 9:
                     print("You have too many friends...")
                     sys.exit()
+
                 else:
                     r = requests.get("http://www.boredapi.com/api/activity?participants=%s" % str(friends))
                     r = r.json()
@@ -69,6 +78,10 @@ try:
                 print("                   [Link]: " + str(r['link']))
                 print("                   [Key]: " + str(r['key']))
             elif name in ['-h', '--help']:
+                print("[Usage:] ./bored -f [friends]")
+                print("-f should be an int (# of participants)")
+                sys.exit()
+            else:
                 print("[Usage:] ./bored -f [friends]")
                 print("-f should be an int (# of participants)")
                 sys.exit()
