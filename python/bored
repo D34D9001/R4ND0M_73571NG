@@ -1,0 +1,36 @@
+#!/usr/bin/env python3
+
+"""
+Are you bored?? This program will generate
+a random activity for you to do.
+
+Created With: 'The Bored API' [https://www.boredapi.com/]
+Created By: D34D9001
+Jan. 10, 2022
+"""
+
+import requests
+import sys
+import json
+from termcolor import colored
+
+try:
+    r = requests.get("http://www.boredapi.com/api/activity/")
+    r = r.json()
+    print("[7H3 80R3D 491]:\n                   Are you bored? Maybe you should...\n")
+    print("                   [Activity]: " + str(r['activity']))
+    if float(r['accessibility'] >= .5):
+        print(colored("                   [Accessibility]: " + str(r['accessibility']), 'red', attrs=['bold']))
+    else:
+        print(colored("                   [Accessibility]: " + str(r['accessibility']), 'green', attrs=['bold']))
+    print("                   [Type]: " + str(r['type']))
+    print("                   [Participants]: " + str(r['participants']))
+    if float(r['price'] >= .5):
+        print(colored("                   [Price]: " + str(r['price']), 'red', attrs=['bold']))
+    else:
+        print(colored("                   [Price]: " + str(r['price']), 'green', attrs=['bold']))
+    print("                   [Link]: " + str(r['link']))
+    print("                   [Key]: " + str(r['key']))
+except Exception as error:
+    print(error)
+    sys.exit()

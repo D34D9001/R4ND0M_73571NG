@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 """
+Created With: 4chanAPI [https://github.com/4chan/4chan-API]
 Created By: D34D9001
 Jan. 10, 2022
 
@@ -15,7 +16,6 @@ import getopt
 import requests
 import sys
 import json
-from pprint import pprint
 from datetime import datetime as dt
 
 argv = sys.argv[1:]
