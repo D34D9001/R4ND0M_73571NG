@@ -13,6 +13,12 @@ Created By: D34D9001
 Jan. 10, 2022
 """
 
+__author__ = "D34D9001"
+__license__ = "MIT"
+__version__ = "1.0.3"
+__maintainer__ = "D34D9001"
+__status__ = "Prototype"
+
 import requests
 import sys
 import json

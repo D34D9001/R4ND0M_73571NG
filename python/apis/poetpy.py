@@ -5,6 +5,11 @@ This script will get a poem from poetrydb.org and display
 it in the terminal. You can specify an author and a title or just a title.
 To see all authors or all titles, type: $ ./poetpy.py -w [for authors] /-p [for titles]
 """
+__author__ = "D34D9001"
+__license__ = "MIT"
+__version__ = "1.0.1"
+__maintainer__ = "D34D9001"
+__status__ = "Prototype"
 
 import requests
 import sys

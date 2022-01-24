@@ -12,6 +12,12 @@ with the '-b' flag to return a list topics within that board.
 [!] Currently only works with select boards
 """
 
+__author__ = "D34D9001"
+__license__ = "MIT"
+__version__ = "1.0.1"
+__maintainer__ = "D34D9001"
+__status__ = "Prototype"
+
 import getopt
 import requests
 import sys

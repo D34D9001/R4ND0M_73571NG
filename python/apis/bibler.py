@@ -4,6 +4,12 @@ Type a book name, number, and a verse [range]
 and bibler will return that bible verse. {KJV}
 EX: ./bibler -n John -b 3 -v 16-18
 """
+__author__ = "D34D9001"
+__license__ = "MIT"
+__version__ = "1.0.1"
+__maintainer__ = "D34D9001"
+__status__ = "Prototype"
+
 import requests
 import sys
 import json
