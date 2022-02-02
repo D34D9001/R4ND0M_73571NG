@@ -22,6 +22,7 @@ argv = sys.argv[1:]
 name = ""
 _from = ""
 company = ""
+# action = "" ## This variable is not currently being used
 method = ""
 
 try:
@@ -29,7 +30,7 @@ try:
     options, args = getopt.getopt(argv, "m:f:c:n:h",
                                ["method=",
                                 "from=",
-                                "company",
+                                "company=",
                                 "name=",
                                 "help"])
 
@@ -42,6 +43,9 @@ try:
 
         if name in ['-c', '--company']:
             company = value
+
+        # if name in ['-a', '--action']:
+        #     action = value
 
         if name in ['-n', '--name']:
             name = value
