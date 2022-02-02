@@ -34,7 +34,7 @@ disp_time = 5
 
 options, args = getopt.getopt(argv, "l:t:h",
                            ["lines=",
-                            "time="
+                            "time=",
                             "help"])
 
 for name, value in options:
@@ -45,13 +45,15 @@ for name, value in options:
         disp_time = int(value)
 
     if name in ['-h', '--help']:
-        print("./pylog.py -c [line count] -t [display time]")
+        print("./pylog.py -l/--line [line count] -t/--time [display time]")
+        sys.exit()
 
 while True:
     if index >= 3:
         index = 0
     subprocess.call(['clear'])
-    print("\n\n             %s\n#######################################\n" % log_list[index])
+    print("\n\n             %s\n#######################################\n"
+          % log_list[index])
     with open('%s/%s' % (log_dir, log_list[index])) as log:
         data = log.readlines()
         output = data[-int(line_cnt):]
