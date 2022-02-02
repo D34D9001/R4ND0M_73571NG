@@ -6,7 +6,7 @@ Feel free to imporove it!
 
 __author__ = "D34D9001"
 __license__ = "MIT"
-__version__ = "1.0.1"
+__version__ = "1.0.2"
 __maintainer__ = "D34D9001"
 __status__ = "Prototype"
 
@@ -23,6 +23,9 @@ name = ""
 _from = ""
 company = ""
 # action = "" ## This variable is not currently being used
+# reference = "" ## This variable is not currently being used
+# reaction = "" ## This variable is not currently being used
+# language = "" ## This variable is not currently being used
 method = ""
 
 try:
@@ -46,6 +49,15 @@ try:
 
         # if name in ['-a', '--action']:
         #     action = value
+
+        # if name in ['-r', '--reference']:
+        #     reference = value
+
+        # if name in ['-e', '--reaction']:
+        #     reference = value
+
+        # if name in ['-l', '--language']:
+        #     language = value
 
         if name in ['-n', '--name']:
             name = value
