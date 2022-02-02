@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="demo">This content is from the HTML file</p>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = "This is from the inline script!"; document.getElementById("demo").style.fontSize = "15px";'>Click Me!</button>
+    <script src="js/content_chng.js"></script>
+    <button type="button" name="hide" onclick="document.getElementById('demo').style.display = 'none'">Hide Stuff</button>
+    <button type="button" name="show" onclick='document.getElementById("demo").style.display = "block"'>Unhide Stuff</button>
+  </body>
+</html>
