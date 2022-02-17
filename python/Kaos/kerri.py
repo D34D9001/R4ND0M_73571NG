@@ -12,6 +12,7 @@ Exception And May Not Be Any Easier To Use With Your Program Or Script
 Than The Standard Imported Exceptions.
 """
 
+import konst
 import time
 import os
 from termcolor import colored
@@ -25,7 +26,7 @@ global pwd
 # WILL NOT CHANGE AUTOMATICALLY, BUT IT CAN BE CHANGED MANUALLY BY:
 #   pwd = \'new/directory/path/\'
 
-pwd = os.getcwd()
+pwd = konst.pwd
 
 ##################
 # ERROR HANDLING #

@@ -6,6 +6,7 @@
     @author: D34D9001@9R0GR4M13
 """
 import kerri
+import konst
 import os
 import requests
 import subprocess
@@ -20,7 +21,7 @@ global pwd
 # WILL NOT CHANGE AUTOMATICALLY, BUT IT CAN BE CHANGED MANUALLY BY:
 #   pwd = \'new/directory/path/\'
 
-pwd = os.getcwd()
+pwd = konst.pwd
 
 #######################
 # INTERNET OPERATIONS #

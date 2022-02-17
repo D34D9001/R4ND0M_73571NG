@@ -6,8 +6,10 @@
     @author: D34D9001@9R0GR4M13
 """
 import kerri
+import konst
 import os
 from datetime import datetime
+
 global pwd
 
 # THIS WILL SET THE CURRENT WORKING DIRECTORY AT TIME OF KAOS IMPORT
@@ -15,7 +17,7 @@ global pwd
 # WILL NOT CHANGE AUTOMATICALLY, BUT IT CAN BE CHANGED MANUALLY BY:
 #   pwd = \'new/directory/path/\'
 
-pwd = os.getcwd()
+pwd = konst.pwd
 
 def logger(command, path="%s/k.log" % pwd, *args):
     """ Log the output of another kaos function to the specified file.

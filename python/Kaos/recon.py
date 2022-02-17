@@ -8,6 +8,7 @@
 import kerri
 import ktime
 import symbo
+import konst
 import os
 import random
 import requests
@@ -30,7 +31,7 @@ global pwd
 # WILL NOT CHANGE AUTOMATICALLY, BUT IT CAN BE CHANGED MANUALLY BY:
 #   pwd = \'new/directory/path/\'
 
-pwd = os.getcwd()
+pwd = konst.pwd
 
 # Output Color
 out_color = symbo.out_color
