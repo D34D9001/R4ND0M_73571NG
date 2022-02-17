@@ -46,5 +46,6 @@ tshark_fields = "Interface"
 logo_loc = "/usr/lib/kaos/media/logo/13-1.png"
 logo_loc_bak = "/usr/share/wallpapers/KaliNeon/contents/images/1600x1200.png"
 
+mac_vendors = '/usr/lib/kaos/mac_vendors'
 
 pwd = os.getcwd()

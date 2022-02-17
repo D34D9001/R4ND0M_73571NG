@@ -37,7 +37,7 @@ pwd = konst.pwd
 out_color = symbo.out_color
 
 # MAC Vendor List Location
-mac_vendors_list = "/usr/lib/kaos/mac_vendors"
+mac_vendors_list = konst.mac_vendors
 
 #########################
 # TARGET RECONNAISSANCE #
@@ -2269,6 +2269,7 @@ webinfo = recon.webinfo
 wafw00f = recon.wafw00f
 p0f = recon.p0f
 arp_fprint = recon.arp_fprint
+dcap = recon.dcap
 
 dns = recon.DNSAnalysis()
 dnsenum = dns.dnsenum
@@ -2295,7 +2296,7 @@ no_dns = nmap.no_dns
 tcp_map = nmap.tcp_map
 udp_map = nmap.udp_map
 def_target = nmap.def_target
-multi_target = nmap.def_target
+multi_target = nmap.multi_def
 
 sspoof = recon.SniffSpoof()
 nc_listen = sspoof.nc_listen
@@ -2311,6 +2312,7 @@ tshark = sspoof.tshark
 std_tshark = sspoof.std_tshark
 wireshark = sspoof.wireshark
 kis_log = sspoof.kis_log
+
 vuln = recon.Vulnerability()
 nikto = vuln.nikto
 golismero = vuln.golismero
