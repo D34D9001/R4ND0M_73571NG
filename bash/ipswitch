@@ -1,0 +1,16 @@
+#!/usr/bin/bash
+
+# This script will automatically change the users IP address with NordVPN
+
+# A NordVPN Account Is Needed To Use This Script
+# Please Install And Setup Nord Before Adding This Script To Cron.d
+
+nordvpn c;
+IPINFO=$(nordvpn status);
+
+echo "" >> /var/log/ipswitch;
+echo "#########################################" >> /var/log/ipswitch;
+echo "$(date)" >> /var/log/ipswitch;
+echo "$IPINFO" >> /var/log/ipswitch;
+echo "#########################################" >> /var/log/ipswitch;
+echo "" >> /var/log/ipswitch;

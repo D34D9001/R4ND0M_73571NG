@@ -1,0 +1,13 @@
+#!/usr/bin/sh
+
+# This script will automatically run a vulnerability audit on the system and
+# mail the user the results
+
+# If a custom profile has not been create for Lynis, please remove the '--profile' option below
+
+lynis audit system --auditor Cron --cronjob --no-colors --pentest --profile /etc/lynis/custom.prf --verbose;
+
+HARDIND=$(cat /var/log/lynis-report.dat | grep "hardening_index=")
+VULNS=$(cat /var/log/lynis-report.dat | grep "vulnerable_packages_found=")
+DATA="$HARDIND\n$VULNS"
+printf "$DATA" | mail -s "Lynis Scan Report" $USER

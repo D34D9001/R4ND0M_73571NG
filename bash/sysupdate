@@ -1,0 +1,36 @@
+#!/usr/bin/sh
+
+# This script will automatically update the system
+# and write the output to a log file.
+
+
+# Get Date For Log File
+DATE=$(date)
+# Move Old Log File To Backup Log
+cat /var/log/sysupdate/update.log >> /var/log/sysupdate/updatelog.bak;
+# Remove Data From Log File
+cat /dev/null > /var/log/sysupdate/update.log
+echo "###############################################################" > /var/log/sysupdate/update.log;
+echo "" >> /var/log/sysupdate/update.log;
+# Update System Repos
+echo "########################   UPDATING   #########################" >> /var/log/sysupdate/update.log;
+sudo yum -v update >> /var/log/sysupdate/update.log;
+echo "" >> /var/log/sysupdate/update.log;
+# Upgrade System
+echo "########################   UPGRADING   ########################" >> /var/log/sysupdate/update.log;
+sudo yum -v upgrade >> /var/log/sysupdate/update.log;
+STATUS=$(echo $?)
+# Clean Up After Upgrade
+echo "#######################   CLEANING UP   #######################" >> /var/log/sysupdate/update.log;
+dnf autoremove >> /var/log/sysupdate/update.log;
+dnf clean all >> /var/log/sysupdate/update.log;
+# Add Summary To Log File
+echo "System Updated @ $DATE" >> /var/log/sysupdate/update.log;
+echo "Exit Status: $STATUS" >> /var/log/sysupdate/update.log;
+# Configure Message
+MSG="System Updated With Status: $STATUS."
+LOGDET="Check Log File @ /var/log/sysupdate for details."
+# Send Mail To User
+printf "$MSG\n$LOGDET" | mail -s "System Update" $USER;
+# Exit Script
+exit 0;
