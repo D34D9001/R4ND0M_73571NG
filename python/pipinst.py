@@ -1,4 +1,4 @@
 #!/usr/bin/env python3
 import subprocess
 
-subprocess.c(pip install requests)
+subprocess.Popen(['pip3', 'install', 'requests'])
