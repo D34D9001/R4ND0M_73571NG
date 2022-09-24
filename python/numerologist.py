@@ -308,6 +308,27 @@ for item in exp_list:
     else:
         break
 
+######################
+### Number frequency
+
+nct = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0}
+for item in report["fullname"].upper():
+    if alpha[item.upper()] in nct:
+        nct[alpha[item.upper()]] += 1
+    else:
+        nct[alpha[item.upper()]] = 1
+
+
+mI = max(nct)
+
+hidden_passion_list = []
+for item in nct:
+
+#    print(item, nct[item])
+    if int(nct[item]) == nct[mI]:
+        hidden_passion_list.append(item)
+    else:
+        pass
 
 ####################################
 ### Rational Thought Number
@@ -798,15 +819,23 @@ else:
 if int(report["b_karma"]) > 0:
     report["b_k"] = report["b_karma"]
 
-######################
-### Number frequency
 
-nct = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0}
-for item in report["fullname"].upper():
-    if alpha[item.upper()] in nct:
-        nct[alpha[item.upper()]] += 1
-    else:
-        nct[alpha[item.upper()]] = 1
+######################
+### Period Cycles
+
+per_cyc = {"cycles": {"1": {"1/2": "26/27", "2/3": "53/54"}, "2": {"1/2": "25/26", "2/3": "52/53"}, "3": {"1/2": "33/34", "2/3": "60/61"}, "4": {"1/2": "32/33", "2/3": "59/60"}, "5": {"1/2": "31/32", "2/3": "58/59"}, "6": {"1/2": "30/31", "2/3": "57/58"}, "7": {"1/2": "29/30", "2/3": "56/57"}, "8": {"1/2": "28/29", "2/3": "55/56"}, "9": {"1/2": "27/28", "2/3": "54/55"}, "11": {"1/2": "25/26", "2/3": "52/53"}, "22": {"1/2": "32/33", "2/3": "59/60"}}}
+
+p_cycle1 = 0
+for item in str(report["b_mon"]):
+    p_cycle1 = p_cycle1 + int(item)
+
+p_cycle2 = 0
+for item in str(report["bday"]):
+    p_cycle2 = p_cycle2 + int(item)
+
+p_cycle3 = 0
+for item in str(report["b_year"]):
+    p_cycle3 = p_cycle3 + int(item)
 
 ######################
 ### Pinnacle Cycles
@@ -873,9 +902,9 @@ if len(str(report["fourth_cycle"])) > 1:
 
 ######### OUTPUT #########
 
-if report["detailed"] == True:
-    print(colored("\n\n\n%s" % logo, 'cyan', attrs=['bold']))
-print(colored("####################################################################################################################################\n\n\n", 'cyan', attrs=['bold']))
+#if report["detailed"] == True:
+#    print(colored("\n\n\n%s" % logo, 'cyan', attrs=['bold']))
+#print(colored("####################################################################################################################################\n\n\n", 'cyan', attrs=['bold']))
 
 print("First Name:    %s :   %s\n" % (colored(report["first_name"], 'blue', attrs=['bold']), colored(report["fname_int"], 'yellow', attrs=['bold'])))
 print("Middle Name:   %s :   %s\n" % (colored(report["middle_name"], 'blue', attrs=['bold']), colored(report["mname_int"], 'yellow', attrs=['bold'])))
@@ -1030,8 +1059,29 @@ else:
         birth = report["bday"]
     print(colored("   Birthday:         ", 'blue', attrs=['bold']) + colored("  %s" % birth, 'yellow', attrs=['bold']))
 
-    print(colored("\n\n##########################################\n", 'red'))
+### Period Cycles
 
+print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
+if report["detailed"] == True:
+    print(colored("\n - Period Cycles:               End Current / Begin Next\n", 'blue', attrs=['bold']))
+    print("First Period Cycle:     %s:                %s" % (colored(p_cycle1, 'yellow', attrs=['bold']), colored(per_cyc["cycles"][str(report["life_path"])]["1/2"], 'cyan', attrs=['bold'])))
+    print(colored("-------------------", 'yellow', attrs=['bold']))
+    print(colored(nd.per_cyc1[str(report["life_path"])], 'white', attrs=['bold']))
+    print("Second Period Cycle:     %s:                %s" % (colored(p_cycle2, 'yellow', attrs=['bold']), colored(per_cyc["cycles"][str(report["life_path"])]["2/3"], 'cyan', attrs=['bold'])))
+    print(colored("-------------------", 'yellow', attrs=['bold']))
+    print(colored(nd.per_cyc2[str(report["life_path"])], 'white', attrs=['bold']))
+    print("Third Period Cycle:     %s:                %s >>" % (colored(p_cycle3, 'yellow', attrs=['bold']), colored(per_cyc["cycles"][str(report["life_path"])]["2/3"].split("/")[1], 'cyan', attrs=['bold'])))
+    print(colored("-------------------", 'yellow', attrs=['bold']))
+    print(colored(nd.per_cyc3[str(report["life_path"])], 'white', attrs=['bold']))
+else:
+    print(colored("\n - Period Cycles:               End Current / Begin Next\n", 'blue', attrs=['bold']))
+    print("First Period Cycle:     %s:                %s" % (colored(p_cycle1, 'yellow', attrs=['bold']), colored(per_cyc["cycles"][str(report["life_path"])]["1/2"], 'blue', attrs=['bold'])))
+    print("Second Period Cycle:     %s:                %s" % (colored(p_cycle2, 'yellow', attrs=['bold']), colored(per_cyc["cycles"][str(report["life_path"])]["2/3"], 'blue', attrs=['bold'])))
+    print("Third Period Cycle:     %s:                %s >>" % (colored(p_cycle3, 'yellow', attrs=['bold']), colored(per_cyc["cycles"][str(report["life_path"])]["2/3"].split("/")[1], 'blue', attrs=['bold'])))
+
+print("\n")
+
+print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
 
 print(colored("   - Karmic Lessons / Hidden Passions Chart", 'blue', attrs=['bold']))
 print("""
@@ -1067,13 +1117,20 @@ print(colored("\n##########################################\n", 'red'))
 print(colored(" - Subconscious Self:", 'blue', attrs=['bold']) + colored("  %s" % report["subcon_self"], 'yellow', attrs=['bold']))
 if report["detailed"] == True:
     print(colored(nd.sub_self["%s" % str(report["subcon_self"])], 'white', attrs=['bold']))
-
-#print(colored(" - Hidden Passion:", 'blue', attrs=['bold']) + colored("  %s" % h_pas, 'yellow', attrs=['bold']))
-
 print(colored("\n##########################################\n", 'red'))
 
+print(colored(" - Hidden Passion:\n", 'blue', attrs=['bold']))
+hpl = ""
+for i in hidden_passion_list:
+#    hpl = str(hpl) + "%s  " % i
+    print(colored("                     %s  " % str(i), 'yellow', attrs=['bold']))
+    if report['detailed'] == True:
+        print(colored(nd.h_pass["%s" % str(i)], 'white', attrs=['bold']))
+    else:
+        print(colored(nd.h_pass["%s" % str(i)], 'white', attrs=['bold']))
 
 if report["detailed"] == True:
+    print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
     if int(report["lp_k"]) > 0 or int(report["ex_k"]) > 0 or int(report["per_k"]) > 0 or int(report["hd_karma"]) > 0 or int(report["b_k"]) > 0:
         print(colored("        - Karmic Debt: ", 'magenta', attrs=['bold']))
         if int(report["lp_k"]) > 0:
@@ -1101,8 +1158,10 @@ if report["detailed"] == True:
             print(colored("   - Birth-Day Karmic Debt:", 'blue', attrs=['bold']) + colored("  %s" % report["b_k"], 'yellow', attrs=['bold']))
             print(colored("###############\n", 'red'))
             print(colored(nd.karm_dict["%s" % report["b_k"]], 'white', attrs=['bold']))
+    print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
 
-        print(colored("\n\n#############################################", 'red'))
+else:
+    print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
 
 
 if report["detailed"] == True:
@@ -1111,6 +1170,7 @@ if report["detailed"] == True:
 else:
     print(colored(" - Balance:      ", 'blue', attrs=['bold']) + colored("  %i" % int(report["balance"]), 'yellow', attrs=['bold']))
 
+    print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
 
 if report["detailed"] == True:
     print(colored("#############################################", 'red'))
@@ -1132,13 +1192,14 @@ else:
     print(colored(" - Key:           ", 'blue', attrs=['bold']) + colored(" %i" % (int(key_num)), 'yellow', attrs=['bold']))
 
 
-print(colored("\n#############################################", 'red'))
+print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
+
 if report["detailed"] == True:
     print(colored(" - Rational Thought:", 'blue', attrs=['bold']) + colored("  %s" % int(rtn), 'yellow', attrs=['bold']))
     print(colored(nd.rt_num["%s" % str(rtn)], 'white', attrs=['bold']))
     print(colored("\n\n#############################################", 'red'))
     print(colored(" - Alignment:", 'blue', attrs=['bold']) + colored("  %s" % report["alignment"], 'yellow', attrs=['bold']))
-    print(colored("\n\n#############################################\n", 'red'))
+    print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
     print(colored("#############################################", 'magenta'))
     print(colored("#############################################\n", 'magenta'))
     print(colored("         Planes of Expression:\n", 'green', attrs=['bold']))
@@ -1184,12 +1245,11 @@ if report["detailed"] == True:
     print(colored("     -  Grounded:     ", 'blue', attrs=['bold']) + "%s"  % colored(expres['grounded'], 'yellow', attrs=['bold']))
     print(colored("#############################################", 'magenta'))
     print(colored("#############################################\n", 'magenta'))
-    print(colored("#############################################\n", 'red'))
 else:
     print(colored(" - Rational Thought:", 'blue', attrs=['bold']) + colored("  %s" % int(rtn), 'yellow', attrs=['bold']))
     print(colored("\n\n#############################################", 'red'))
     print(colored(" - Alignment:", 'blue', attrs=['bold']) + colored("  %s" % report["alignment"], 'yellow', attrs=['bold']))
-    print(colored("\n\n#############################################\n", 'red'))
+    print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
     print(colored("#############################################", 'magenta'))
     print(colored("#############################################\n", 'magenta'))
     print(colored("         Planes of Expression:\n", 'green', attrs=['bold']))
@@ -1218,8 +1278,10 @@ else:
     print(colored("     -  Vacillating:  ", 'blue', attrs=['bold']) + "%s"  % colored(expres['vacillating'], 'yellow', attrs=['bold']))
     print(colored("     -  Grounded:     ", 'blue', attrs=['bold']) + "%s"  % colored(expres['grounded'], 'yellow', attrs=['bold']))
     print(colored("#############################################", 'magenta'))
-    print(colored("#############################################\n", 'magenta'))
-    print(colored("#############################################\n", 'red'))
+    print(colored("#############################################\n\n\n", 'magenta'))
+
+print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
+
 ### Maturity
 
 if int(mat2) > 0:
@@ -1233,8 +1295,7 @@ if report["detailed"] == True:
 else:
     print(colored(" - Maturity:", 'blue', attrs=['bold']) + colored("  %s" % ture, 'yellow', attrs=['bold']))
 
-
-print(colored("\n\n#############################################", 'red'))
+print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
 
 if report["detailed"] == False:
     print(colored(" - Challenge 1:", 'blue', attrs=['bold']) + colored("  %s" % report["challenge_1"], 'yellow', attrs=['bold']))
@@ -1254,8 +1315,8 @@ else:
     print(colored(" - Challenge 4:", 'blue', attrs=['bold']) + colored("  %s" % report["challenge_4"], 'yellow', attrs=['bold']))
     print(colored(nd.cnum["%s" % str(report["challenge_4"])], 'white', attrs=['bold']))
 
+print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
 
-print(colored("\n\n#############################################", 'red'))
 if report["detailed"] == True:
     print(colored(" - Life Path/Expression Bridge:", 'blue', attrs=['bold']) + colored("       %i" % report["le_bridge"], 'yellow', attrs=['bold']))
     print(colored(nd.bridge["%s" % str(report["le_bridge"])], 'white', attrs=['bold']))
@@ -1263,14 +1324,16 @@ if report["detailed"] == True:
     print(colored(" - Hearts Desire/Personality Bridge:", 'blue', attrs=['bold']) + colored("  %i" % report["hp_bridge"], 'yellow', attrs=['bold']))
     print(colored(nd.bridge["%s" % str(report["hp_bridge"])], 'white', attrs=['bold']))
 
-    #print(colored(" - Life Path/Birthday Bridge:", 'blue', attrs=['bold']) + colored("         %i" % report["lb_bridge"], 'yellow', attrs=['bold']))
+    print(colored(" - Life Path/Birthday Bridge:", 'blue', attrs=['bold']) + colored("         %i" % report["lb_bridge"], 'yellow', attrs=['bold']))
+    print(colored(nd.bridge["%s" % str(report["lb_bridge"])], 'white', attrs=['bold']))
+
 else:
     print(colored(" - Life Path/Expression Bridge:", 'blue', attrs=['bold']) + colored("       %i" % report["le_bridge"], 'yellow', attrs=['bold']))
     print(colored(" - Hearts Desire/Personality Bridge:", 'blue', attrs=['bold']) + colored("  %i" % report["hp_bridge"], 'yellow', attrs=['bold']))
 
 ### Pinnacle Cycles
 
-print(colored("\n\n#############################################", 'red'))
+print(colored("\n##########################################\n##########################################\n##########################################", 'yellow', attrs=['bold']))
 
 if report["detailed"] == True:
     print(colored(" - Pinnacle Cycles:\n", 'blue', attrs=['bold']))
@@ -1288,5 +1351,3 @@ else:
     print("Third Cycle:     %s:  %s" % (colored(report["third_cycle"], 'blue', attrs=['bold']), colored(pin_cyc["paths"][report["life_path"]]["3rd_cycle"], 'yellow', attrs=['bold'])))
     print("Fourth Cycle:     %s:  %s" % (colored(report["fourth_cycle"], 'blue', attrs=['bold']), colored(pin_cyc["paths"][report["life_path"]]["4th_cycle"], 'yellow', attrs=['bold'])))
 
-
-print("\n")

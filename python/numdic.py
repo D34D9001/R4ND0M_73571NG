@@ -2926,3 +2926,356 @@ specific Karmic Lessons and are therefore not as vulnerable to Life’s ups and 
 as others. 
 """,
 }
+h_pass = {
+"1": """
+You have a strong drive to stand out. You have a great ambition and desire to accomplish. You are highly competitive and want to be the best and the first in everything you do. You are highly energetic and creative. You are capable of influencing and even dominating others. You have highly developed political skills, and can succumb to manipulation unless your ideals are high.
+Ironically, there are times when you lack confidence, especially at an earlier age, but you have the strength to overcome this obstacle.
+You are a survivor, a warrior, a leader. Many great athletes and politicians have this number as a Hidden Passion.
+Too many ones (6 or more in a name of average length), can make a person bullish, aggressive, violent, even tyrannical.
+""",
+"2": """
+You are highly considerate, sensitive, and intuitive. You seek peaceful and pleasant environments. You work hard to establish harmony among your peers and co-workers. You work well in groups, often serving as the peacemaker. You may appear shy and timid and although you like people there is an inner fear, you dislike noise and roughness.
+You are committed to your work and perform your job with a high degree of competency, patience, and persistence. You are a magnet for information. You are often one of the pillars of any organization. People naturally rely upon you.
+You have a tendency to worry too much about trivial details and can waste time on petty affairs. You may be too sensitive and easily hurt; your feelings can get in the way of your sound judgement.
+You have a good ear for music and rhythm and an appreciation for the arts. You love beauty in your environment. You have fine and delicate taste.
+""",
+"3": """
+You are highly social and have a gift for self- expression. You love to entertain and attend parties. You are exceedingly popular, and a good friend.
+You are highly talented in one or more of the arts - writing, acting, music, or painting.
+You need excitement. When things are dull, you tend to fantasize and sometimes exaggerate.
+You are very inspiring and motivating to others. You are blessed with a considerable amount of charm and charisma. You are highly optimistic, which can make you a bit of a rolling stone. You think that the grass is always going to be greener on the other side of the hill.
+You need discipline and focus to make the most of your talents. You can fall victim to scattering your energies. You have to guard against being selfish and indulging in too much sensory gratification.
+""",
+"4": """
+Systematic and organized, there are few goals out of your reach. You have determination, perseverance and self- discipline. You are perceived as solid as a rock and just as reliable. Your family and friends have faith in you and your ability to care for them.
+You identify with work and are can be very unhappy if you are in a job you do not love. You have a sharp eye for detail. You enjoy the security and steadiness of schedules. You do not like the unexpected.
+You are practical and realistic. You are also concerned about the welfare of your community.
+You love nature and the beauty and efficiency that characterizes natural law.
+You have sound judgement and understanding when it comes to estimating the value of a plan or the feasibility of an enterprise. You have good concentration.
+Your family and home are very important to you. Your love runs deep and is extremely loyal and protective.
+For those who have many 4s - four or more - in their names or in prominent places in their chart must guard against becoming obsessed with details, rigid, narrow-minded, and boring.
+""",
+"5": """
+You love travel, change, and new challenges. You are highly adaptable and versatile. You have a talent for languages, and are generally good with words. Writing, promotion, and public relations work suit you perfectly.
+You are sensual and a bit impulsive. You love to satisfy your senses, which can get you into trouble. Overindulgence in food, drink, sex, and drugs are common among people with too many 5s - six or more.
+You are resourceful and original. You have a good sense of humor and a quick tongue.
+Your desire for freedom is extremely strong and it will take effort and discipline to stick with whatever it is you started. There is a tendency to give up a project or situation prematurely. You may be interested in too many things, which can make it hard for you to apply yourself to one area successfully. You are very unconventional.
+""",
+"6": """
+You have a dream to be of service to those you love and your community. You have the ability to be a healer, counselor, or teacher. You are a highly responsible person, willing to sacrifice much. You must be careful of not becoming a doormat for those who do not appreciate you, or seek to take advantage of you.
+You are idealistic and have strong opinions. You also have a tendency to become self righteous. You are generous and a humanitarian.
+You are an excellent parent and marriage partner. You are helpful and forever willing to listen to someone else's troubles, but must be careful not to interfere.
+""",
+"7": """
+You have a highly developed mind and a fine intuition. You are intellectual and deal well with abstract ideas. You like to be alone to contemplate, meditate and study. You are drawn to the philosophical and metaphysical. Nevertheless, you can be highly skeptical and even cynical of things you cannot prove.
+You are a deep thinker with unusual understanding and insight. You do not like to waste time on trivial and petty matters.
+You are a specialist and a perfectionist. You come up with unique solutions to problems and can be very convincing when the subject interests you.
+You can be self-centered, melancholic and depressed. Loneliness is quite common among people with many sevens, they have to learn to be alone without being lonely. Faith in the order and balance of nature is a must. You may seem different, alien and hard to get to know to others, but once they "know" you, they love and respect you. Even though you tend to keep to yourself you are generous with your love, genuinely concerned with the happiness of those around you but not demonstrative.
+""",
+"8": """
+Success and material reward are important motivations for your actions. You believe in effort and are very goal-oriented. You can dominate and impress others with your vision and common business sense. You are a born manager and organizer, your subordinates usually like you. Leadership and authority are obvious, but it is wise not to be to forceful, demanding and dominant. You are a good judge of character with an uncanny ability to sense other people’s strength and weaknesses.
+There may be a tendency to abuse this talent, all eights have to be wary of greed and ruthlessness. Your ability to sense where someone else is "coming from" is much better served with your natural counselors instinct. Many eights, although being an advantage in the business world and a help in the quest for success, may make life pretty hard too.
+Many tests and frustrations have to be overcome and, most important, the proper balance and perspective regarding spirit and matter has to be attained. You need a family to be proud of, and status to feel rewarded. You may have a tendency to showing of your wealth and success.
+""",
+"9": """
+Warm, generous and compassionate, you would do well and be quite happy in any undertaking that not only supplies you with a decent living but also is for the good of all. You are artistic, the nine is responsible for many of our creative geniuses, however these talents are often suppressed, sometimes coming to the surface at middle or old age. You have a strong desire for insight and universal knowledge.
+You are emotional, your feelings are not always sensible and they too are often suppressed.
+You can get caught up in dreams and ideals without being practical but with enough fire and enthusiasm to attract support. Your oratorical abilities save many a situation. You are driven to do your own thing and are quite independent.
+"""
+}
+
+per_cyc1 = {
+"1": """
+The first three decades of your life represent a period of much intensity. It requires fortitude, courage, and flexibility. You will be forced to use every one of your talents in order to achieve your own personal individuality and independence.
+
+This is a period of integration and focusing on your life's dream.
+
+Your grip on your direction will be tested, but somehow the resources are available to overcome any obstacle and emerge from this time all the stronger. It is a time requiring independence, resilience, and strength, but these characteristics become integral part of your personality.
+
+This cycle marks a time of progress.
+""",
+"2": """
+The first 30 years of your life represent a period of slow and patient development. You are acutely sensitive to your surroundings and highly intuitive. You possess a gift as a peacemaker and have tremendous power through gentle persuasion. Cultivate the talents of tact and diplomacy. Cooperate with others.
+
+Musical and other artistic talents come to fruition.
+
+Partnerships are important, requiring understanding and compromise. You need patience and flexibility, but you are under a gentle and benevolent influence in which others are happy to support you.
+
+Seek out beauty and harmonious environments, spend time in nature, and enjoy the peace of close companionship. This is a period of slow but steady progress.
+""",
+"3": """
+The early part of your life is a time of heightened self expression and much social support. Any ability you possess in the arts, especially in writing, acting, or dance, will be brought to new heights and meet with much reward.
+
+You are socially active and will appear to others as charming, attractive, even charismatic. Be careful not to waste your energies on too many superficial projects or relationships, however.
+
+The time requires discipline and focus in order to make the most of the great upward energy that is filling your life.
+""",
+"4": """
+The first 3 decades of your life represent a time of hard work and all the rewards it can bring. This is a period in which you are concerned chiefly with the practical things of life: work and career, sound family and a solid community. You are not given to flights of fancy or idealism, but want to place your life on sound financial footing.
+
+You can be overly concerned with details and thus can find yourself in ruts that will have to be broken free of. Find work you love and do it to your heart's content, but do not neglect the rest of your humanity, or that of others close to you.
+
+This is a time requiring discipline, order, and self-motivation.
+
+Work is the order of the day. But through these characteristics, you will be seen as the foundation of your family, job, and even community.
+""",
+"5": """
+The years until about age 30 represent a period of rapid progress and much change. You are learning the lesson of freedom. You will travel, move your residence many times, and change jobs. You are footloose. It is a time when you will be free of the burdens of responsibility. You will have a flair for successfully promoting yourself.
+
+Your abilities with words will be greatly enhanced.
+
+You can learn foreign languages, write, and edit. You will meet many exciting people, visit foreign lands, and encounter many new ideas. Identify yourself with all that is progressive and farsighted in your field. Seek change and take hold of new opportunities.
+""",
+"6": """
+The first one-third of your life is a time of family, responsibility, and duty. The issues of commitment, marriage, and family all come into sharp focus. When the commitments are made and one responds lovingly and with acceptance, this is a period of much harmony and support.
+
+You are greatly needed by those around you.
+
+You will be loved and appreciated. This is the best cycle for marriage. In the same way, partnerships go well and much progress is made from joint activities.
+
+Conversely, if commitments are not deeply made or are broken, separation and divorce often occur. Any artistic talent you possess will surface and new opportunities for self-expression will present themselves.
+
+You are also under very supportive influences for starting a business. This is a time of progress through flexibility, cooperation, and compromise.
+""",
+"7": """
+The first three decades of your life represent a time to specialize, think deeply, and contemplate the deeper questions of life. Study a subject you enjoy in depth. You are attracted to the fields of science, technology, philosophy, and metaphysics. Become an expert in a specific area.
+
+You have excellent intuition and a mind that can penetrate beneath the surface of any subject you commit to.
+Focus your energies and thoughts.
+This is a period of inner development. Meditation, contemplation, and self-reflection are means of inner enrichment. Develop wisdom.
+
+Relationship may seem burdensome at times because of the desire to spend time alone. There is some resistance to sharing your deeper feelings with others. The inner life is so compelling that you will want to immerse yourself in it. Share the knowledge you accumulate by teaching, counseling, or simply talking to others.
+""",
+"8": """
+You are under an extremely benevolent period for work, career, and financial reward starting at an early age and continuing into your mid-thirties. The key is hard work and the willingness to rededicate yourself after setbacks or difficulties.
+
+You will have greatly enhanced abilities as a manager, organizer, and financial planner. You have a gift for seeing the broad picture and carrying out bold plans. You can gain financial freedom during this period. Business and career activities go well, but require much attention and commitment.
+
+You are being pushed to take control of your career or enterprise and bring it to new heights.
+
+It is a time when power falls to you, but must be used wisely and with purpose.
+""",
+"9": """
+This is a period in which a broad view of humanity and a sincere concern for the well being of others will be developed. Tolerance, acceptance, and universal love are the goals of this 9 Cycle, and while such perfection will not be fully achieved, the person under this influence will grow toward these ideals.
+
+Humanitarian principles and social service are the keys to personal happiness.
+
+All work directed toward the improvement of the general welfare will bring great personal rewards, as well. Hard work directed toward higher ideals is rewarded.
+
+Creative talent is also enhanced, especially when it is joined with some larger social purpose or message. There is an element of sacrifice or letting go, as one is asked to forgive past grievances and let go of negative attachments.
+
+The person is being asked to live according to a higher ethical standard, with much spiritual and personal enrichment as his reward.
+""",
+"11": """
+The first 30 years of your life represent a time of spiritual expansion, even illumination. You will grow in understanding and wisdom. It is not a time to pursue material goals for themselves, but to seek the higher human ideals.
+
+There is a temptation, however, to chase after the infinite without grounding yourself in the practical. That must be avoided. Focus your studies and deepen your understanding to the point that your knowledge can be conveyed to others in simple and acceptable terms.
+
+You possess a message or an ability that should be shared with your community, but only through deep personal transformation and improvement of self-expression can this gift be given.
+
+The more willing you are to work on yourself, the more good you will do for the world at large. For those who accept and embrace this path, there is much reward, including ample financial support and even fame. There is also the deeper satisfaction of knowing that one has made a contribution to the advancement of others.
+""",
+"22": """
+
+"""
+}
+per_cyc2 = {
+"1": """
+The middle years of your life (approximately ages 30 to 60) find you on an intense path of personal growth. You are required to adapt frequently to the many ups and downs in your life.
+
+When 1 rules the second Period Cycle it focuses on self-empowerment.
+
+To facilitate this, situations occur that force you to dig deep to find the courage required to face your challenges. You have love and support, but circumstances will often demand that you rely heavily on your own strengths.
+
+Fortunately, throughout this approximately thirty-year period, you often have confirmation that your gut feelings are correct and feel you are moving in the right direction.
+
+You will likely find yourself in a leadership position, strengthening your self-confidence even more.
+""",
+"2": """
+The middle part of your life is a period for learning to tune into your sensitive, intuitive side.
+
+You are drawn to interact with people on a personal level. You recognize the subtle signs that reveal what others are experiencing, and your ability to influence people improves.
+
+You become more diplomatic and tactful, and are able to diffuse potentially troubling situations.
+
+However, you may also feel you are growing more fragile. Emotions play a large role during a 2 Period.
+
+It is your challenge to maintain a realistic perspective, and to stay grounded.
+
+Devoting time to the arts, especially music, ballet, theater, and other performing arts, helps you feel connected and involved.
+""",
+"3": """
+The middle part of your life is a time of heightened self-expression and social support. Abilities you possess in the arts, especially in writing, acting, or dance, are enhanced.
+
+You are more social than you have been in the past, and others are attracted to your charm and charisma.
+
+Although this is a time of maturing, you feel as though you are becoming mentally younger and more creative.
+
+Staying focused on practical goals may be challenging.
+""",
+"4": """
+The middle part of your life is a period of hard work and the rewards it can bring.
+
+You are chiefly concerned with the practical aspects of life: career, family, and community. You are not given to pursuing idealistic or impractical goals during this time, as you prefer to place your life on sound financial footing.
+
+Find work you love, so your effort brings reward not only through promotion, success, and money, but also in joy and a sense of accomplishment.
+
+This is a time dominated by discipline, order, and self-motivation, traits that will endear you to your family, co-workers, and community.
+""",
+"5": """
+The middle part of your life is a period of rapid progress and change. You learn the lessons, values, and responsibilities that come with freedom. You likely travel, move residences, or change jobs frequently.
+
+You are footloose and free-spirited. You acquire a flair for self-promotion, which can benefit your professional life. You become better at self-expression and grow less inhibited.
+
+During this period, you meet many interesting, often eccentric people and encounter new ideas. You benefit from change and avoiding a predictable, routine lifestyle.
+
+A 5 Period Cycle is dynamic and chaotic; it requires an open mind and tolerance for concepts and lifestyles you may initially find quite foreign. Opening up to new ideas is challenging but rewarding.
+""",
+"6": """
+Your middle years are a time of responsibility and duty. The issues of commitment, marriage, and family come into sharp focus. If you honor your commitments with acceptance and love, this can be a period of harmony and support.
+
+You are needed by others; you are loved and appreciated. Reinforced by the loving, family-oriented 6, this is the best cycle for marriage and commitment.
+
+In the same way, partnerships go well and progress is made through joint effort. Conversely, commitments that are broken or not deeply made tend to end in separation or divorce more often during this period than others.
+
+Artistic talents you possess may surface or heighten, and opportunities for self-expression present themselves. A commercial opportunity is supported, possibly your own business.
+
+This is a time of progress through flexibility, cooperation, and compromise.
+""",
+"7": """
+A 7 Period Cycle during the middle years of your life produces a period of intellectual depth and contemplation. It is a time to concentrate on the big questions of life. You are attracted to science, technology, philosophy, and/or metaphysics.
+
+This cycle requires that you focus your energies and thoughts. Regardless of the course you choose, you must immerse yourself and specialize to become an expert in your field.
+
+This is a period of inner development; meditation, contemplation, and self-reflection are your keys to enrichment and wisdom.
+
+Relationships seem burdensome at times due to your desire to spend time alone. There is also resistance to sharing your deeper feelings with others.
+
+Sharing your knowledge by teaching, counseling, or simply talking to others is beneficial.
+""",
+"8": """
+The 8 Period Cycle usually bodes well for work, career, and financial reward. This is a time when power falls to you, but must be used wisely and with purpose. You likely find yourself in a position of authority and leadership.
+
+Vision and a willingness to take risks are necessary to advance your career or business. However, there is a danger of being duped by get-rich-quick schemes.
+
+With balance as its most essential quality, the statement "You reap what you sow" applies to the 8 more than to any other number. With effort and diligence, financial reward is almost guaranteed.
+
+However, if cutting corners or opportunism is the driving force behind your professional life, financial ruin could just as likely be the result.
+
+The 8 is rarely neutral regarding punishment or reward.
+""",
+"9": """
+This is a period where you develop a broad view of humanity and sincere concern for the well-being of others. Tolerance, acceptance, and universal love are the goals of a 9 Cycle, and people under its influence move toward those ideals.
+
+Humanitarian principles and social service are the keys to personal happiness in a 9 Period. Hard work directed toward higher ideals is rewarded. Creative talent is enhanced, especially when joined by a larger social purpose or message.
+
+There is an element of sacrifice or letting go, as you are asked to forgive past grievances and part with negative attachments.
+
+You are inspired to live according to a higher ethical standard, with personal enrichment as reward.
+""",
+"11": """
+Your 2nd Period Cycle is an 11 Master number and a period of spiritual expansion, even illumination. You grow in understanding and wisdom.
+
+It is a time to seek higher human ideals.
+
+There is a temptation, however, to chase after the infinite without being grounded in the practical.
+
+Teaching and sharing your knowledge are important aspects of this cycle. You likely possess a message or an ability that should be shared with your community, but only through deep personal transformation and enhanced self-expression can this gift be communicated effectively.
+
+Focus on your studies and deepen your understanding. The more work you do on yourself, the better you will contribute to the world at large.
+
+For those who embrace this path there are many rewards, including the deep satisfaction that comes from making a contribution to the advancement of others. For some, this will include financial gain and notoriety.
+""",
+"22": """
+Your 2nd Period Cycle is a 22 Master number and carries enormous potential for establishing a lasting institution or teaching that will greatly benefit others. You have the ability to manifest a concept, dream, or invention. Your talents as a builder, organizer, and visionary are at their peak.
+You discern the needs of others and create constructive and practical plans to fulfill those needs.
+You commit yourself entirely to the work at hand. For many, this dream lasts a lifetime and requires every ounce of energy and talent. An all-consuming role beckons but provides a great sense of personal accomplishment and reward.
+You possess an ability to make a lasting contribution to the well-being of humanity.
+"""
+}
+per_cyc3 = {
+"1": """
+Your 2nd Period Cycle is a 22 Master number and carries enormous potential for establishing a lasting institution or teaching that will greatly benefit others. You have the ability to manifest a concept, dream, or invention. Your talents as a builder, organizer, and visionary are at their peak.
+
+You discern the needs of others and create constructive and practical plans to fulfill those needs.
+You commit yourself entirely to the work at hand. For many, this dream lasts a lifetime and requires every ounce of energy and talent. An all-consuming role beckons but provides a great sense of personal accomplishment and reward.
+
+You possess an ability to make a lasting contribution to the well-being of humanity.
+""",
+"2": """
+The latter part of your life finds you increasingly intuitive, relying more on your heart than on your mind. You become less inhibited, as you gradually lose the fear of showing your true and deeper self.
+
+You are more direct and less hesitant to express your feelings. You rely on your gut feelings more often. "If it feels right, it probably is," could become one of your stronger convictions. You are better at working with people and you become a master in the fine art of persuasion.
+
+Younger people, and others, are drawn to you - especially those who live with difficult circumstances and those who could use your help. You may well discover a talent you have not previously considered, perhaps in the visual arts.
+""",
+"3": """
+The latter part of your life finds you "growing older" more slowly than your peers. The excitable, scattered, creative energy of the 3 can resemble an elixir from the fountain of youth. However, there is a tendency to waste time and energy on unproductive projects.
+
+You have many original ideas, but you may have difficultly differentiating between lead balloons and those that can fly. Your 3 energy is uplifting and motivating, which draws people to you. However, staying focused may be a challenge, which could affect your ability to reach your goal.
+
+Your need to express yourself through art, especially the verbal or performing arts increases with age.
+""",
+"4": """
+Chances are you are as busy as ever in the latter period of your life. Whether it is because you continue to work or become involved in a project by choice, you continue to move forward, finding reward through your efforts.
+
+During this time, you build an even stronger foundation in many areas of your life. Your home, family, and finances remain important but your inner/spiritual and emotional life develops as well.
+
+You become increasingly concerned with moral issues and matters of justice. You may be drawn to volunteer, perhaps for a non-profit relating to injustice and inequality.
+""",
+"5": """
+The latter period of your life finds you continuing to move through changing circumstances. There is an inherent restlessness associated with a 5 Period Cycle  one of the few cycles that encourages a more impulsive response to situations you encounter.
+
+You are drawn to travel, new people, and different cultures. This is a dynamic, somewhat chaotic cycle, where not much happens according to plan.
+
+You do best when you are social, physically active, and involved  giving your heart and mind the experiences they crave.
+
+During this period, you have a flair for successfully promoting yourself. You are drawn to all that is progressive and farsighted. This is a time to be quick and flexible, and to grasp opportunities as they come.
+""",
+"6": """
+The latter part of your life finds you primarily focused on family matters. It is likely you will continue to care for others well into your sixties (or longer), which will provide great satisfaction.
+
+You may be more involved in the arts through volunteering or teaching and engaged in community affairs or local politics. Artistic talents you possess are enhanced, and you find opportunities to express them.
+
+This is a cycle of stability in relationships (although not necessarily romantic relationships). Partnerships or family-run businesses have a significant chance for success.
+""",
+"7": """
+A 7 Period Cycle, especially in your later years, centers on wisdom and contentment. This is a time of spiritual/internal and intellectual growth, of discovering the beauty and harmony that underlie creation.
+
+However, it is often one of the most difficult last cycles, due in large part to society's lack of appreciation for the intangible qualities of this number.
+
+Socially, you may feel distant and isolated. Interacting with similarly minded people through book clubs, art events, theater sponsorships, or other intellectually and spiritually stimulating activities can help you feel more connected.
+
+Although this is the latter part of your life, it may well be your most exciting time of discovery and personal growth.
+""",
+"8": """
+As you approach the time of life when most people prefer to slow down, you continue to see opportunities and are excited about their potential. Retiring is not likely under this Period Cycle.
+
+There is promise in the air, financially as well as in personal relationships. You gain respect and admiration, and others look to you for guidance and support. Your personal power and authority increase but you use them with consideration for others.
+
+You possess enhanced abilities as a manager, organizer, or financial planner. Your ability to see the broad picture and execute bold plans grows with age. However, this period can be somewhat of a roller-coaster ride with a possibly of unexpected losses - the lesson of detachment is also the domain of the 8.
+
+Your key to success lies in understanding the limits of material wealth.
+""",
+"9": """
+The latter part of your life finds you increasingly idealistic and concerned with the betterment of humankind. You become more broadminded and reach out to people from all walks of life.
+
+You offer your time and resources to causes you believe in.
+
+Your interests are increasingly directed toward other cultures and societies. Your sense of justice and your interest in political and humanitarian issues becomes more finely tuned. Whereas most people "mellow out" with age, you find yourself becoming more passionate.
+
+Your creativity increases during the later part of your life, with a focus on design and large-scale projects. You may be inspired to study design, engineering, or architecture.
+""",
+"11": """
+The latter part of your life finds you increasingly intuitive and relying more on your emotions. You become less inhibited as you gradually lose the fear of sharing your true, deeper self. You are more direct and less hesitant to express your feelings. You are better at working with people, and you become a master in the fine art of persuasion.
+
+Others are drawn to you, especially young people and those who live in difficult circumstances and need help. You likely discover a talent you hadn't previously been aware of, perhaps in the visual arts.
+""",
+"22": """
+This cycle carries enormous potential for establishing a lasting institution or teaching that will greatly benefit others. You have the ability to manifest a concept, dream, or invention. Your talents as a builder, organizer, and visionary are at their peak.
+
+You discern the needs of others and create constructive and practical plans to fulfill those needs. You commit yourself entirely to the work at hand.
+
+For many, this dream lasts a lifetime and requires every ounce of energy and talent. An all-consuming role beckons but provides a great sense of personal accomplishment and reward. You possess an ability to make a lasting contribution to the well-being of humanity.
+"""
+}
